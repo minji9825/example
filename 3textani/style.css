@@ -1,0 +1,38 @@
+@charset "UTE-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+*{margin: 0; padding: 0;}
+body{
+    background-color: midnightblue;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{height: 100vh; width: 100%; overflow: hidden;}
+section .scroll{display: flex;
+    position: absolute;
+    left: 97px; 
+    top: 0px;
+    transform-origin: left top; /* 중심이동 */
+    transform: rotate(90deg) translate(0px,0px);
+}
+section .scroll div{background: #fff;
+white-space: nowrap; font-size: 4em;
+/* em->16px 4em->16*4} */
+animation: animate1 40s linear infinite;}
+section .scroll div:nth-child(2){
+    animation: animate2 40s linear infinite;
+    animation-delay: -20s;
+}
+section .scroll div span{
+    -webkit-text-stroke:2px #000;
+    color: transparent; /* transparent -> 투명하게 한다는 것 */
+}
+@keyframes animate1{
+    0%{transform: translateX(100%);}  /* 내 몸의 100%만큼 오른쪽으로  */
+    100%{transform: translateX(-100%);} /* 왼쪽으로 */
+}
+@keyframes animate2{
+    0%{transform: translateX(0%);}
+    100%{transform: translateX(-200%);}
+}
