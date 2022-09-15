@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="text">0</div>
+    <div class="fixed_bg" data-0="background-color:rgb(21,67,110);" data-1000="background-color:rgb(37, 109, 133);
+     width:100%; left:0%;" data-2000="width:60%; left:20%"></div>
+
+    <section class="slide slide1" 
+    data-0="top:0%" 
+    data-500="top:-100%"
+    >
+        <div class="spiderman">
+           <img src="img/Spider-Man.png" alt="이미지">
+        </div>
+        <div class="spider">
+            <img src="img/spider.png" alt="이미지">
+         </div>
+         <div class="spider1">
+            <img src="img/spider2.png" alt="이미지">
+         </div>
+    </section>
+
+    <section class="slide slide2" 
+    data-500="opacity:0; transform:translateX(100%)"
+    data-1000="opacity:1; transform:translateX(0%)" 
+    data-2000="opacity:0; "
+    >
+    </section>
+
+    <section class="slide slide3" 
+    data-1000="top:-100%; opacity:0" 
+    data-2000="top:0%; opacity:1">
+    </section>
+
+    <section class="slide slide4"
+    data-2000="opacity:0"
+    data-3000="opacity:1"
+    >
+        <div class="slide-content"
+        data-2000="top:200px"
+        data-3000="top:0px"
+        >
+            <h2>SPIDER MAN</h2>
+        </div>
+    </section>
+
+    <section class="slide slide5"
+    data-2500="top:100%"
+    data-4000="top:-100%"
+    
+    >
+        <img src="img/man.png" alt="man">
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+
+        var text = document.querySelector('.text');
+
+        window.addEventListener("scroll", function () {
+            var wScroll = window.pageYOffset;
+            text.innerHTML = wScroll;
+        })
+    </script>
+</body>
+
+</html>
